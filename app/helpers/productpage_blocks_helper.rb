@@ -1,0 +1,2 @@
+module ProductpageBlocksHelper
+end
