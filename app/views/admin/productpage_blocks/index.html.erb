@@ -30,17 +30,3 @@
 <p>
     <%= link_to icon('add') + ' ' + t("new_productpage_block"), new_admin_product_productpage_block_url(@product), :id => "new_productpage_block_link" %>
 </p>
-
-<% content_for :head do %>
-  <script type="text/javascript">
-    jQuery(document).ready(function(){
-
-      jQuery('#new_productpage_block_link').click(function (event) {
-        event.preventDefault();
-        jQuery(this).hide();
-        jQuery.ajax({type: 'GET', url: this.href, data: ({authenticity_token: AUTH_TOKEN}), success: function(r){ jQuery('#productpage_block').html(r);} });
-      });
-
-    });
-  </script>
-<% end %>
