@@ -1,3 +1,5 @@
 en:
-  productpage_blocks: Blocks
-  new_productpage_block: New Block
+  productpage_block: "Block"
+  productpage_blocks: "Blocks"
+  new_productpage_block: "New Block"
+  popup_image: "Popup Image"

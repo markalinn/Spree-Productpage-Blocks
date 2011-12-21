@@ -8,6 +8,11 @@ class ProductpageBlock < ActiveRecord::Base
                     :default_style => :original,
                     :url => "/assets/products/:id/productpage_blocks/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/products/:id/productpage_blocks/:style/:basename.:extension"
+  has_attached_file :popup,
+                    :styles => { :mini => '48x48>'},
+                    :default_style => :original,
+                    :url => "/assets/products/:id/productpage_blocks/popup/:style/:basename.:extension",
+                    :path => ":rails_root/public/assets/products/:id/productpage_blocks/popup/:style/:basename.:extension"
   acts_as_list
 
   # save the w,h of the original image (from which others can be calculated)
