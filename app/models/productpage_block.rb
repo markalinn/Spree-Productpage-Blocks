@@ -9,8 +9,8 @@ class ProductpageBlock < ActiveRecord::Base
                     :url => "/assets/products/:id/productpage_blocks/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/products/:id/productpage_blocks/:style/:basename.:extension"
   has_attached_file :popup,
-                    :styles => { :mini => '48x48>'},
-                    :default_style => :original,
+                    :styles => { :mini => '48x48>', :standard => '800x800>', :large => '940x940>'},
+                    :default_style => :standard,
                     :url => "/assets/products/:id/productpage_blocks/popup/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/products/:id/productpage_blocks/popup/:style/:basename.:extension"
   acts_as_list
